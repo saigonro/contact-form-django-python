@@ -1,0 +1,29 @@
+{% extends 'home/base.html' %}
+{% load bootstrap_tags %}
+
+{% block content %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h3>Contact / Email app</h3>
+                <p>Please fill up the form below:</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3 pt-3 pb-5">
+                <form role="form" action="" method="post">
+                    {% csrf_token %}
+                    {{ form | as_bootstrap }}
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}
